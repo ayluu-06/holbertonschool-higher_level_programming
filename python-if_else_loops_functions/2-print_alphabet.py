@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("")
+print(*(chr(i) for i in range(97, 123)), sep="", end="")
