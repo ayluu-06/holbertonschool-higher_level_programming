@@ -1,26 +1,19 @@
-Case
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+>>> B = BaseGeometry()
 
+>>> B.integer_validator("name", 0) 
+Traceback (most recent call last):
+ValueError: name must be greater than 0
 
+>>> B.integer_validator("name", -1) 
+Traceback (most recent call last):
+ValueError: name must be greater than 0
 
+>>> B.integer_validator("name", "abc")
+Traceback (most recent call last):
+TypeError: name must be an integer
 
-
-#!/usr/bin/python3
-
-"""
-modulo que contiene la clase
-"""
-
-
-class BaseGeometry:
-    """
-    an empty class BaseGeometry
-    """
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+>>> B.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
