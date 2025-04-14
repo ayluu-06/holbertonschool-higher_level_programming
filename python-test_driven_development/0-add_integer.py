@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 
 Documented module
@@ -6,7 +8,7 @@ Documented module
 
 
 def add_integer(a, b=98):
-    """ 
+    """
     Function that adds two integer and/or float numbers
     """
 
