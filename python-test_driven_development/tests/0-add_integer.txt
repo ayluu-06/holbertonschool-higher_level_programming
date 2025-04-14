@@ -1,5 +1,13 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
+0-add_integer module
+====================
+
+This module provides a function to add two integers.
+
+Function add_integer
+--------------------
+
 >>> add_integer(1, 2)
 3
 
